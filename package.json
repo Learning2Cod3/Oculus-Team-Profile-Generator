@@ -1,0 +1,22 @@
+{
+  "name": "oculus-team-profile-generator",
+  "version": "1.0.0",
+  "description": "This is an application that creates profiles for current and any potential team members looking to join the work force",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Learning2Cod3/Oculus-Team-Profile-Generator.git"
+  },
+  "author": "Omar Kange",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Learning2Cod3/Oculus-Team-Profile-Generator/issues"
+  },
+  "homepage": "https://github.com/Learning2Cod3/Oculus-Team-Profile-Generator#readme",
+  "dependencies": {
+    "inquirer": "^8.2.0"
+  }
+}
