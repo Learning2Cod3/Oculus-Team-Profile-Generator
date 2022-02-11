@@ -2,9 +2,9 @@
 const generateHTML = require('./src/page-template.js');
 
 // team profiles
-const Manager = require('./lib/Manager');
-const Engineer = require('./lib/Engineer');
-const Intern = require('./lib/Intern'); 
+const Manager = require('./wp/Manager');
+const Engineer = require('./wp/Engineer');
+const Intern = require('./wp/Intern'); 
 
 // node modules 
 const fs = require('fs'); 
@@ -86,7 +86,7 @@ const addEmployee = () => {
     Adding employees to the team
     =================
     `);
-
+// adding the employee role after manager
     return inquirer.prompt ([
         {
             type: 'list',
@@ -199,14 +199,14 @@ const addEmployee = () => {
 
 // function to generate HTML page file using file system 
 const writeFile = data => {
-    fs.writeFile('./index.html', data, err => {
+    fs.writeFile('./dist/index.html', data, err => {
         // if there is an error 
         if (err) {
             console.log(err);
             return;
         // when the profile has been created 
         } else {
-            console.log("Your team profile has been successfully created! Please check out the index.html")
+            console.log("Page Created! Please check out the index.html")
         }
     })
 }; 
