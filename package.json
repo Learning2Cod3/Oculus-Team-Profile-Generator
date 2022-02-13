@@ -4,7 +4,8 @@
   "description": "This is an application that creates profiles for current and any potential team members looking to join the work force",
   "main": "index.js",
   "scripts": {
-    "test": "npm test"
+    "test": "jest"
+    
   },
   "repository": {
     "type": "git",

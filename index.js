@@ -9,6 +9,7 @@ const Intern = require('./wp/Intern');
 // node modules 
 const fs = require('fs'); 
 const inquirer = require('inquirer');
+const { type } = require('os');
 
 // team array
 const teamArray = []; 
@@ -138,7 +139,7 @@ const addEmployee = () => {
             type: 'input',
             name: 'github',
             message: "Please enter the employee's github username.",
-            choices: ['JavaScript', 'HTML', 'CSS', 'ES6', 'jQuery', 'Bootstrap', 'Node'],
+           
             when: (input) => input.role === "Engineer",
             validate: nameInput => {
                 if (nameInput ) {
@@ -147,8 +148,24 @@ const addEmployee = () => {
                     console.log ("Please enter the employee's github username!")
                 }
             }
+    
         },
         {
+            type: 'list',
+            name: 'languages',
+            message: 'Please select engineers experience',
+            choices: ['JavaScript', 'HTML', 'CSS', 'ES6', 'jQuery', 'Bootstrap', 'Node'],
+            
+            when: (list) => list.role === "Engineer",
+            validate: listInput => {
+                if (listInput ) {
+                    return true;
+                } else {
+                    console.log ("Please enter the employee's github username!")
+                }
+            }
+        },
+        {    
             type: 'input',
             name: 'school',
             message: "Please enter the intern's school",
@@ -210,7 +227,7 @@ const writeFile = data => {
         }
     })
 }; 
-
+// promise chain
 addManager()
   .then(addEmployee)
   .then(teamArray => {

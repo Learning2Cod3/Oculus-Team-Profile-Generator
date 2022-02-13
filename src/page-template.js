@@ -32,7 +32,7 @@ const generateEngineer = function (engineer) {
                 <p class="id">ID: ${engineer.id}</p>
                 <p class="email">Email: <a href="mailto:${engineer.email}">${engineer.email}</a></p>
                 <p class="github">Github: <a href="https://github.com/${engineer.github}">${engineer.github}</a></p>
-                <p class="experience">Choices: ${engineer.choices}</p>
+                <p class="languages">language experience: ${engineer.choices}</p>
             </div>
         </div>
     </div>
